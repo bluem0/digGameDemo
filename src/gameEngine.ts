@@ -55,7 +55,6 @@ function generateMap(): MapCell[][] {
         row.push({ type: 'dirt', item });
       }
     }
-    row.push();
     map.push(row);
   }
   return map;
@@ -395,7 +394,8 @@ export function buyTool(state: GameState, shopIndex: number): GameState {
   }
 
   const newTools = state.tools.map((s) => ({ ...s }));
-  // We store tools differently - as ToolId in ownedTools
+  // Tool slots use a sentinel item (instanceId prefixed with "tool_") to mark the slot as occupied.
+  // The actual tool effect is tracked via ownedTools; defId is a placeholder and not used for tools.
   newTools[freeToolSlot] = { item: { instanceId: `tool_${shopItem.toolId}`, defId: 'bone_fragment' } };
 
   const newShop = state.shop.map((s, i) => i === shopIndex ? { ...s, purchased: true } : s);

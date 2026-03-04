@@ -328,7 +328,7 @@ export default function App() {
             onSort={() => handleSort('storage')}
           />
           <ItemGrid
-            title={`🚗 车厢 (${state.cartCols}×${RENT_SCHEDULE.length - 1 >= 0 ? Math.ceil(state.cart.length / state.cartCols) : 3})`}
+            title={`🚗 车厢 (${state.cartCols}×${Math.ceil(state.cart.length / state.cartCols)})`}
             slots={state.cart}
             cols={state.cartCols}
             source="cart"

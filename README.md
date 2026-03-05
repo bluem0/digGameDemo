@@ -4,6 +4,14 @@
 
 ![游戏截图](https://github.com/user-attachments/assets/3c4fcad5-d011-4920-9450-05c4eb268036)
 
+## 在线试玩
+
+🎮 **GitHub Pages 预览地址**：[https://bluem0.github.io/digGameDemo/](https://bluem0.github.io/digGameDemo/)
+
+> **部署说明**：
+> - 在仓库 Settings → Pages 中，Source 选择 **GitHub Actions**（首次部署请确认此项已设置）。
+> - 每次推送到 `main` 分支或在 Actions 页面手动触发 `Deploy to GitHub Pages` workflow，即可重新部署。
+
 ## 运行方式
 
 ```bash
